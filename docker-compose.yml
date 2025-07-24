@@ -6,7 +6,7 @@ services:
     image: postgres:13
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: admin123
+      POSTGRES_PASSWORD: admin321
       POSTGRES_DB: new_employee_db
     ports:
       - "5410:5432"
@@ -23,7 +23,7 @@ services:
     environment:
       PG_HOST: postgres
       DB_USER: postgres
-      DB_PASSWORD: admin123
+      DB_PASSWORD: admin321
       DB_NAME: new_employee_db
     depends_on:
       - postgres
