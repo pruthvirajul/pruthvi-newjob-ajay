@@ -37,15 +37,15 @@ app.use(morgan('dev'));
 
 // CORS configuration
 const allowedOrigins = [
-  'http://44.223.23.145:8031',
-  'http://44.223.23.145:8032',
-  'http://44.223.23.145:8033',
-  'http://44.223.23.145:3408',
-  'http://localhost:8031',
-  'http://localhost:8032',
-  'http://localhost:8033',
-  'http://127.0.0.1:5500',
-  'http://127.0.0.1:5502',
+  'http://13.61.100.57:8031',
+  'http://13.61.100.57:8032',
+  'http://13.61.100.57:8033',
+  'http://13.61.100.57:3408',
+  'http://13.61.100.57:8031',
+  'http://13.61.100.57:8032',
+  'http://13.61.100.57:8033',
+  'http://13.61.100.57:5500',
+  'http://13.61.100.57:5502',
   'null', // Added temporarily for file:// testing
 ];
 
@@ -68,7 +68,7 @@ const pool = new Pool({
   user: process.env.DB_USER || 'postgres',
   host: process.env.PG_HOST || 'postgres',
   database: process.env.DB_NAME || 'new_employee_db',
-  password: process.env.DB_PASSWORD || 'admin123',
+  password: process.env.DB_PASSWORD || 'admin321',
   port: process.env.DB_PORT || 5432,
   ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : false,
 });
@@ -549,5 +549,5 @@ app.use((err, req, res, next) => {
 
 // Start server
 app.listen(port, () => {
-  console.log(`Server running at http://44.223.23.145:${port}`);
+  console.log(`Server running at http://13.61.100.57:${port}`);
 });
